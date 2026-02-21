@@ -10,8 +10,23 @@ const menus = [
     id: "scalp",
     tab: "育毛×ヘッドスパ",
     enTitle: "Scalp Care Head Spa",
-    description:
-      "お客様指名No.1として名高い頭皮と髪を根本からリセットするラグジュアリーな育毛ヘッドスパ。医師も推奨する上質なヒト脂肪由来幹細胞上清液から、最先端のヒト臍帯由来幹細胞上清液まで、グレードに応じたスペシャルケアをご提供。頭皮・髪・心まで満たす至福のスパ体験をお届けします。",
+    description: (
+      <>
+        お客様指名No.1として名高い、
+        <br />
+        頭皮と髪を根本からリセットするラグジュアリーな育毛ヘッドスパ。
+        <br />
+        <br />
+        医師も推奨する上質なヒト脂肪由来幹細胞上清液から、
+        <br />
+        最先端のヒト臍帯由来幹細胞上清液まで、
+        <br />
+        グレードに応じたスペシャルケアをご提供。
+        <br />
+        <br />
+        頭皮・髪・心まで満たす至福のスパ体験をお届けします。
+      </>
+    ),
     items: [
       {
         name: "Scalp Care | Level 3",
@@ -51,8 +66,18 @@ const menus = [
     id: "color",
     tab: "ヘアカラー×ヘッドスパ",
     enTitle: "Hair Color Head Spa",
-    description:
-      "ゼロテクニックカラーで頭皮への刺激を最小限に抑えながら、ダメージを防ぎつつ、美しいカラーデザインとスカルプケアを同時に実現する贅沢なハイブリッドメニューです。アロマクリームバスを用いて血流・リンパ・神経バランスに丁寧にアプローチ。※ブリーチは使用しておりません。",
+    description: (
+      <>
+        ゼロテクニックカラーで頭皮への刺激を最小限に抑えながら、
+        <br />
+        ダメージを防ぎつつ、美しいカラーデザインとスカルプケアを同時に実現する贅沢なハイブリッドメニューです。
+        <br />
+        <br />
+        アロマクリームバスを用いて血流・リンパ・神経バランスに丁寧にアプローチ。
+        <br />
+        ※ブリーチは使用しておりません。
+      </>
+    ),
     items: [
       {
         name: "Hair Color Head Spa + Scalp Care",
@@ -83,8 +108,18 @@ const menus = [
     id: "relaxation",
     tab: "リラクゼーション",
     enTitle: "Relaxation Head Spa",
-    description:
-      "オールハンドで頭・首・額の筋膜を丹念にほぐし、アロマクリームバス・スチーム・ホットストーンで血流とリンパを極上に活性化。電気バリブラシと頭皮化粧水で頭皮を整え、眼精疲労を解き放ち、フェイスラインと頭皮を優美にリフトアップ。五感すべてに響く、唯一無二の至福体験をお届けします。",
+    description: (
+      <>
+        オールハンドで頭・首・額の筋膜を丹念にほぐし、
+        <br />
+        アロマクリームバス・スチーム・ホットストーンで血流とリンパを極上に活性化。
+        <br />
+        <br />
+        電気バリブラシと頭皮化粧水で頭皮を整え、眼精疲労を解き放ち、フェイスラインと頭皮を優美にリフトアップ。
+        <br />
+        五感すべてに響く、唯一無二の至福体験をお届けします。
+      </>
+    ),
     items: [
       {
         name: "Relaxation Head Spa",
@@ -181,7 +216,7 @@ export function MenuSection() {
                 </div>
 
                 {/* Description */}
-                <p className="mx-auto mb-10 max-w-2xl text-center text-xs leading-[2.4] tracking-[0.03em] text-muted-foreground lg:text-[13px]">
+                <p className="mx-auto mb-10 max-w-2xl text-center text-xs leading-[2.4] tracking-[0.03em] text-muted-foreground lg:text-left lg:text-[13px]">
                   {activeMenu.description}
                 </p>
 
