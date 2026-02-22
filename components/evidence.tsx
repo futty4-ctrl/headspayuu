@@ -122,7 +122,7 @@ function BeforeAfterSlider() {
 
 export function Evidence() {
   return (
-    <section id="evidence" className="bg-secondary py-24 lg:py-36">
+    <section id="evidence" className="bg-secondary py-16 lg:py-24">
       <div className="mx-auto max-w-4xl px-5 lg:px-10">
         <FadeIn>
           <div className="mb-16 flex flex-col items-center">

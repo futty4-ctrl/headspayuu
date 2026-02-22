@@ -149,7 +149,7 @@ export function MenuSection() {
   const activeMenu = menus.find((m) => m.id === activeTab)!
 
   return (
-    <section id="menu" className="bg-background py-24 lg:py-36">
+    <section id="menu" className="bg-background py-16 lg:py-24">
       <div className="mx-auto max-w-5xl px-5 lg:px-10">
         {/* Section heading */}
         <FadeIn>
@@ -279,13 +279,13 @@ export function MenuSection() {
                 <div className="flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
                   <a
                     href="#"
-                    className="w-full border border-gold bg-gold px-10 py-3 text-center text-[11px] tracking-[0.2em] text-background transition-all duration-300 hover:bg-transparent hover:text-gold sm:w-auto"
+                    className="flex min-h-[44px] w-full items-center justify-center border border-gold bg-gold px-10 py-3 text-center text-[11px] tracking-[0.2em] text-background transition-all duration-300 hover:bg-transparent hover:text-gold sm:w-auto"
                   >
                     御予約
                   </a>
                   <a
                     href="#"
-                    className="w-full border border-foreground/20 px-10 py-3 text-center text-[11px] tracking-[0.2em] text-foreground transition-all duration-300 hover:border-gold/50 hover:text-gold sm:w-auto"
+                    className="flex min-h-[44px] w-full items-center justify-center border border-foreground/20 px-10 py-3 text-center text-[11px] tracking-[0.2em] text-foreground transition-all duration-300 hover:border-gold/50 hover:text-gold sm:w-auto"
                   >
                     お問い合わせ
                   </a>

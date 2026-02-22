@@ -4,7 +4,7 @@ import { FadeIn } from "@/components/fade-in"
 
 export function AccessMap() {
   return (
-    <section id="access" className="bg-background py-24 lg:py-36">
+    <section id="access" className="bg-background py-16 lg:py-24">
       <div className="mx-auto max-w-3xl px-5 lg:px-10">
         <FadeIn>
           <div className="mb-16 flex flex-col items-center">
@@ -24,12 +24,10 @@ export function AccessMap() {
               ヘッドスパ専門店 ゆう
             </p>
             <p className="text-xs leading-[2.4] tracking-[0.08em] text-muted-foreground">
-              〒810-0001 福岡県福岡市中央区天神X-X-X
-              <br />
-              ○○ビル 3F
+              福岡県福岡市西区豊浜2丁目20-20-2
             </p>
             <p className="mt-3 text-[11px] tracking-[0.08em] text-muted-foreground">
-              {'西鉄福岡（天神）駅より徒歩5分'}
+              TEL: 092-284-9392
             </p>
           </div>
         </FadeIn>
@@ -37,7 +35,7 @@ export function AccessMap() {
         <FadeIn delay={0.2}>
           <div className="overflow-hidden border border-border/40">
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3323.526178667564!2d130.3988!3d33.5902!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3541918f1a6e0001%3A0x0!2zMzPCsDM1JzI0LjciTiAxMzDCsDIzJzU1LjciRQ!5e0!3m2!1sja!2sjp!4v1700000000000!5m2!1sja!2sjp"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6647.109643438461!2d130.33487757515678!3d33.590906141950285!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3541936d028cb64d%3A0xf4531f4c7f531b6c!2z44OY44OD44OJ44K544OR5bCC6ZaA5bqX44KG44GG!5e0!3m2!1sja!2sjp!4v1771765599477!5m2!1sja!2sjp"
               width="100%"
               style={{ border: 0 }}
               allowFullScreen
@@ -56,7 +54,7 @@ export function AccessMap() {
                 OPEN
               </p>
               <p className="text-xs tracking-[0.1em] text-foreground/80">
-                10:00 - 19:00
+                9:00 - 17:30
               </p>
             </div>
             <div className="bg-card px-3 py-4 md:px-4 md:py-5">

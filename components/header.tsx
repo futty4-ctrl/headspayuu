@@ -56,7 +56,7 @@ export function Header() {
           {/* Center: Reservation button - white bg, rounded, black text */}
           <a
             href="#reservation"
-            className="rounded-full bg-foreground px-6 py-2 text-[10px] tracking-[0.15em] text-background transition-all duration-300 hover:bg-gold hover:text-background"
+            className="flex min-h-[44px] items-center justify-center rounded-full bg-foreground px-6 py-2 text-[11px] tracking-[0.15em] text-background transition-all duration-300 hover:bg-gold hover:text-background sm:text-[10px]"
           >
             45秒で予約
           </a>

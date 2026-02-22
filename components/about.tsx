@@ -5,7 +5,7 @@ import { FadeIn } from "@/components/fade-in"
 
 export function About() {
   return (
-    <section id="about" className="bg-background py-24 lg:py-36">
+    <section id="about" className="bg-background py-16 lg:py-24">
       <div className="mx-auto max-w-3xl px-6 lg:px-10">
         <FadeIn>
           <div className="mb-12 flex justify-center">
@@ -70,13 +70,13 @@ export function About() {
           >
             <a
               href="#"
-              className="w-full border border-gold bg-gold px-12 py-3.5 text-center text-xs tracking-[0.25em] text-background transition-all duration-300 hover:bg-transparent hover:text-gold sm:w-auto"
+              className="flex min-h-[44px] w-full items-center justify-center border border-gold bg-gold px-12 py-3.5 text-center text-xs tracking-[0.25em] text-background transition-all duration-300 hover:bg-transparent hover:text-gold sm:w-auto"
             >
               御予約
             </a>
             <a
               href="#"
-              className="w-full border border-foreground/20 px-12 py-3.5 text-center text-xs tracking-[0.25em] text-foreground transition-all duration-300 hover:border-gold/50 hover:text-gold sm:w-auto"
+              className="flex min-h-[44px] w-full items-center justify-center border border-foreground/20 px-12 py-3.5 text-center text-xs tracking-[0.25em] text-foreground transition-all duration-300 hover:border-gold/50 hover:text-gold sm:w-auto"
             >
               お問い合わせ
             </a>

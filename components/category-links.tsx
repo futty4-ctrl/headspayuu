@@ -15,7 +15,7 @@ const links = [
 
 export function CategoryLinks() {
   return (
-    <section id="category" className="bg-secondary py-24 lg:py-36">
+    <section id="category" className="bg-secondary py-16 lg:py-24">
       <div className="mx-auto max-w-2xl px-5 lg:px-10">
         <FadeIn>
           <div className="mb-16 flex flex-col items-center">
@@ -34,7 +34,7 @@ export function CategoryLinks() {
             <FadeIn key={label} delay={index * 0.04}>
               <a
                 href="#"
-                className="group flex items-center justify-between rounded-sm border border-border/40 bg-card px-5 py-4 transition-all duration-500 hover:border-gold/30 md:px-6 md:py-5"
+                className="group flex min-h-[44px] items-center justify-between rounded-sm border border-border/40 bg-card px-5 py-5 transition-all duration-500 hover:border-gold/30 md:px-6"
               >
                 <span className="text-sm tracking-[0.12em] text-foreground/80 transition-colors duration-500 group-hover:text-gold">
                   {label}

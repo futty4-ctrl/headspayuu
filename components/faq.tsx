@@ -57,7 +57,7 @@ const faqs = [
 
 export function Faq() {
   return (
-    <section id="faq" className="bg-background py-24 lg:py-36">
+    <section id="faq" className="bg-background py-16 lg:py-24">
       <div className="mx-auto max-w-3xl px-5 lg:px-10">
         <FadeIn>
           <div className="mb-16 flex flex-col items-center">
@@ -79,7 +79,7 @@ export function Faq() {
                 value={`item-${index}`}
                 className="border-border/30"
               >
-                <AccordionTrigger className="py-5 text-left text-sm tracking-[0.05em] text-foreground/80 hover:text-gold hover:no-underline md:py-6 lg:text-[15px]">
+                <AccordionTrigger className="flex min-h-[44px] items-center py-5 text-left text-sm tracking-[0.05em] text-foreground/80 hover:text-gold hover:no-underline md:py-6 lg:text-[15px]">
                   <span className="flex items-start gap-3">
                     <span className="shrink-0 text-[11px] tracking-[0.1em] text-gold/60">Q.</span>
                     <span>{faq.q}</span>

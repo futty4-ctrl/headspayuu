@@ -57,7 +57,7 @@ const cards = [
 
 export function InformationCarousel() {
   return (
-    <section id="information" className="bg-background py-24 lg:py-32">
+    <section id="information" className="bg-background py-16 lg:py-32">
       <div className="mx-auto max-w-6xl px-5 lg:px-10">
         <FadeIn>
           <div className="mb-16 flex flex-col items-center">

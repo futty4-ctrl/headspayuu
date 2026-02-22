@@ -28,7 +28,7 @@ export function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 0.3, ease }}
-          className="mb-6 text-[10px] tracking-[0.5em] text-gold/80"
+          className="mb-6 text-[11px] tracking-[0.5em] text-gold/80 sm:text-[10px]"
         >
           {'【ヘッドスパ専門店ゆう】'}
         </motion.p>
@@ -42,22 +42,16 @@ export function Hero() {
           {'～日常に静かな贅沢を～'}
         </motion.p>
 
-        <motion.div
+        <motion.h1
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 0.7, ease }}
-          className="mb-10 flex flex-col items-center gap-2"
+          className="mb-10 flex flex-col items-center gap-2 text-center text-sm leading-[2.2] tracking-[0.2em] text-foreground/90 md:text-base"
         >
-          <p className="text-sm leading-[2.2] tracking-[0.2em] text-foreground/90 md:text-base">
-            完全個室・1日3名様限定
-          </p>
-          <p className="text-sm leading-[2.2] tracking-[0.2em] text-foreground/90 md:text-base">
-            熟練のオールハンドで行う
-          </p>
-          <p className="text-sm leading-[2.2] tracking-[0.2em] text-foreground/90 md:text-base">
-            ヘッドスパ専門店
-          </p>
-        </motion.div>
+          <span>完全個室・1日3名様限定</span>
+          <span>熟練のオールハンドで行う</span>
+          <span>ヘッドスパ専門店</span>
+        </motion.h1>
 
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -67,13 +61,13 @@ export function Hero() {
         >
           <a
             href="#reservation"
-            className="border border-foreground/40 px-6 py-3 text-[11px] tracking-[0.2em] text-foreground transition-all duration-300 hover:border-gold hover:text-gold"
+            className="flex min-h-[44px] items-center justify-center border border-foreground/40 px-6 py-3 text-[11px] tracking-[0.2em] text-foreground transition-all duration-300 hover:border-gold hover:text-gold"
           >
             今すぐ予約
           </a>
           <a
             href="#about"
-            className="border border-foreground/40 px-6 py-3 text-[11px] tracking-[0.2em] text-foreground transition-all duration-300 hover:border-gold hover:text-gold"
+            className="flex min-h-[44px] items-center justify-center border border-foreground/40 px-6 py-3 text-[11px] tracking-[0.2em] text-foreground transition-all duration-300 hover:border-gold hover:text-gold"
           >
             初めての方へ
           </a>
@@ -88,7 +82,7 @@ export function Hero() {
         className="absolute bottom-8 left-1/2 -translate-x-1/2"
       >
         <div className="flex flex-col items-center gap-3">
-          <span className="text-[9px] tracking-[0.4em] text-foreground/40">SCROLL</span>
+          <span className="text-[11px] tracking-[0.4em] text-foreground/40 sm:text-[9px]">SCROLL</span>
           <motion.div
             animate={{ y: [0, 6, 0] }}
             transition={{ duration: 2.5, repeat: Infinity, ease: "easeInOut" }}

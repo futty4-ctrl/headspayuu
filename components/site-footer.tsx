@@ -4,7 +4,7 @@ import { FadeIn } from "@/components/fade-in"
 
 export function SiteFooter() {
   return (
-    <footer className="bg-background py-20 lg:py-24">
+    <footer className="bg-background py-16 lg:py-24">
       <div className="mx-auto max-w-6xl px-5 lg:px-10">
         <FadeIn>
           <div className="mb-10 flex flex-col items-center">
@@ -23,10 +23,10 @@ export function SiteFooter() {
         <FadeIn delay={0.08}>
           <div className="mb-10 flex flex-col items-center gap-2 text-center">
             <p className="text-[10px] leading-[2] tracking-[0.1em] text-foreground/30 lg:text-xs">
-              福岡県福岡市西区豊浜
+              福岡県福岡市西区豊浜2丁目20-20-2
             </p>
             <p className="text-[10px] leading-[2] tracking-[0.1em] text-foreground/30 lg:text-xs">
-              営業時間 10:00 - 19:00（不定休）
+              営業時間 9:00～17:30（不定休）
             </p>
           </div>
         </FadeIn>
