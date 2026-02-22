@@ -69,7 +69,9 @@ export function About() {
             className="mt-12 flex flex-col items-center gap-4 sm:flex-row sm:justify-center"
           >
             <a
-              href="#"
+              href="https://coubic.com/yuheadspa/services"
+              target="_blank"
+              rel="noopener noreferrer"
               className="flex min-h-[44px] w-full items-center justify-center border border-gold bg-gold px-12 py-3.5 text-center text-xs tracking-[0.25em] text-background transition-all duration-300 hover:bg-transparent hover:text-gold sm:w-auto"
             >
               御予約
