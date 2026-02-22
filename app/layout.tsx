@@ -1,7 +1,6 @@
 import type { Metadata, Viewport } from 'next'
 import { Noto_Serif_JP } from 'next/font/google'
 import { Analytics } from '@vercel/analytics/next'
-import { FloatingReserve } from '@/components/floating-reserve'
 import './globals.css'
 
 const notoSerifJP = Noto_Serif_JP({
@@ -64,7 +63,6 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
         {children}
-        <FloatingReserve />
         <Analytics />
       </body>
     </html>
