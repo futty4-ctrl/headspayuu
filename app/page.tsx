@@ -2,7 +2,6 @@ import { Header } from "@/components/header"
 import { Hero } from "@/components/hero"
 import { InformationCarousel } from "@/components/information-carousel"
 import { About } from "@/components/about"
-import { Essences } from "@/components/essences"
 import { MenuSection } from "@/components/menu-section"
 import { Evidence } from "@/components/evidence"
 import { Faq } from "@/components/faq"
@@ -17,7 +16,6 @@ export default function Home() {
       <Hero />
       <InformationCarousel />
       <About />
-      <Essences />
       <MenuSection />
       <Evidence />
       <Faq />
