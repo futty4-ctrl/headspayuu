@@ -7,6 +7,7 @@ import { motion, AnimatePresence } from "framer-motion"
 const navLinks = [
   { label: "INFORMATION", href: "#information" },
   { label: "当店について", href: "#about" },
+  { label: "10のこだわり", href: "#essences" },
   { label: "メニュー", href: "#menu" },
   { label: "EVIDENCE", href: "#evidence" },
   { label: "FAQ", href: "#faq" },
