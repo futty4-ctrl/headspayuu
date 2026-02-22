@@ -59,6 +59,10 @@ export function Header() {
             href="https://coubic.com/yuheadspa/services"
             target="_blank"
             rel="noopener noreferrer"
+            onClick={(e) => {
+              e.preventDefault()
+              window.open("https://coubic.com/yuheadspa/services", "_blank", "noopener,noreferrer")
+            }}
             className="flex min-h-[44px] items-center justify-center rounded-full bg-foreground px-6 py-2 text-[11px] tracking-[0.15em] text-background transition-all duration-300 hover:bg-gold hover:text-background sm:text-[10px]"
           >
             45秒で予約
@@ -128,7 +132,11 @@ export function Header() {
                   href="https://coubic.com/yuheadspa/services"
                   target="_blank"
                   rel="noopener noreferrer"
-                  onClick={() => setIsMenuOpen(false)}
+                  onClick={(e) => {
+                    e.preventDefault()
+                    setIsMenuOpen(false)
+                    window.open("https://coubic.com/yuheadspa/services", "_blank", "noopener,noreferrer")
+                  }}
                   className="border border-gold bg-gold px-12 py-3.5 text-xs tracking-[0.2em] text-background transition-all duration-300 hover:bg-transparent hover:text-gold"
                 >
                   御予約はこちら

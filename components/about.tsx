@@ -72,6 +72,10 @@ export function About() {
               href="https://coubic.com/yuheadspa/services"
               target="_blank"
               rel="noopener noreferrer"
+              onClick={(e) => {
+                e.preventDefault()
+                window.open("https://coubic.com/yuheadspa/services", "_blank", "noopener,noreferrer")
+              }}
               className="flex min-h-[44px] w-full items-center justify-center border border-gold bg-gold px-12 py-3.5 text-center text-xs tracking-[0.25em] text-background transition-all duration-300 hover:bg-transparent hover:text-gold sm:w-auto"
             >
               御予約

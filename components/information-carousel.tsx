@@ -109,6 +109,14 @@ export function InformationCarousel() {
                             href={btn === "御予約" ? "https://coubic.com/yuheadspa/services" : "#"}
                             target={btn === "御予約" ? "_blank" : undefined}
                             rel={btn === "御予約" ? "noopener noreferrer" : undefined}
+                            onClick={
+                              btn === "御予約"
+                                ? (e) => {
+                                    e.preventDefault()
+                                    window.open("https://coubic.com/yuheadspa/services", "_blank", "noopener,noreferrer")
+                                  }
+                                : undefined
+                            }
                             className="border border-gold/40 px-4 py-2 text-[9px] tracking-[0.15em] text-gold transition-all duration-300 hover:bg-gold hover:text-background"
                           >
                             {btn}
