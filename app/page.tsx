@@ -16,7 +16,6 @@ export default function Home() {
       <Hero />
       <InformationCarousel />
       <About />
-      <Essences />
       <MenuSection />
       <Evidence />
       <Faq />
