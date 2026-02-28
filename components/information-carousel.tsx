@@ -92,6 +92,13 @@ export function InformationCarousel() {
                           e.currentTarget.style.display = "none"
                         }}
                       />
+                      {card.title.includes("ONLINE STORE") && (
+                        <div className="absolute inset-0 flex items-center justify-center">
+                          <span className="text-xl font-light tracking-[0.3em] text-foreground/90 sm:text-2xl">
+                            ONLINE STORE
+                          </span>
+                        </div>
+                      )}
                     </div>
 
                     {/* Card content */}
