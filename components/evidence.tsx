@@ -4,10 +4,13 @@ import { useState, useRef } from "react"
 import Image from "next/image"
 import { FadeIn } from "@/components/fade-in"
 
-const slides = Array.from({ length: 26 }, (_, i) => ({
-  src: `/images/evidence-${String(i + 1).padStart(2, "0")}.png`,
-  alt: `ビフォーアフター ${i + 1}枚目`,
-}))
+const excluded = [3, 8, 21]
+const slides = Array.from({ length: 26 }, (_, i) => i + 1)
+  .filter((n) => !excluded.includes(n))
+  .map((n, i) => ({
+    src: `/images/evidence-${String(n).padStart(2, "0")}.png`,
+    alt: `ビフォーアフター ${i + 1}枚目`,
+  }))
 
 export function Evidence() {
   const [current, setCurrent] = useState(0)
