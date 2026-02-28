@@ -4,12 +4,10 @@ import { useState, useRef } from "react"
 import Image from "next/image"
 import { FadeIn } from "@/components/fade-in"
 
-const slides = [
-  { src: "/images/evidence-01.jpg", alt: "ビフォーアフター 1枚目" },
-  { src: "/images/evidence-02.jpg", alt: "ビフォーアフター 2枚目" },
-  { src: "/images/evidence-03.jpg", alt: "ビフォーアフター 3枚目" },
-  { src: "/images/evidence-04.jpg", alt: "ビフォーアフター 4枚目" },
-]
+const slides = Array.from({ length: 26 }, (_, i) => ({
+  src: `/images/evidence-${String(i + 1).padStart(2, "0")}.png`,
+  alt: `ビフォーアフター ${i + 1}枚目`,
+}))
 
 export function Evidence() {
   const [current, setCurrent] = useState(0)
