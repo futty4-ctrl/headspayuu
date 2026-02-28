@@ -69,7 +69,7 @@ export function Essences() {
                 {/* /images/essence-01.jpg ～ essence-10.jpg を配置 */}
                 <div className="relative h-20 w-20 shrink-0 overflow-hidden bg-zinc-800 md:h-24 md:w-24">
                   <Image
-                    src={`/images/essence-${item.number}.jpg`}
+                    src={`/images/essence-${item.number}.png`}
                     alt={item.text}
                     fill
                     className="object-cover"
