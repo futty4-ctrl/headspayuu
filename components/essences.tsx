@@ -72,7 +72,7 @@ export function Essences() {
                     src={`/images/essence-${item.number}.png`}
                     alt={item.text}
                     fill
-                    className="object-cover"
+                    className="object-contain"
                     sizes="96px"
                     onError={(e) => {
                       e.currentTarget.style.display = "none"
