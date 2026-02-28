@@ -86,7 +86,7 @@ export function InformationCarousel() {
                         src={card.image}
                         alt={card.title}
                         fill
-                        className="object-cover"
+                        className="object-contain"
                         sizes="(max-width: 640px) 85vw, (max-width: 768px) 60vw, (max-width: 1024px) 45vw, 35vw"
                         onError={(e) => {
                           e.currentTarget.style.display = "none"

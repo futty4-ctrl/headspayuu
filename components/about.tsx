@@ -14,7 +14,7 @@ export function About() {
                 src="/images/about-portrait.png"
                 alt="ヘッドスパ専門店ゆう"
                 fill
-                className="object-cover"
+                className="object-contain"
                 sizes="128px"
               />
             </div>

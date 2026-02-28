@@ -66,7 +66,7 @@ export function Evidence() {
                       src={slide.src}
                       alt={slide.alt}
                       fill
-                      className="object-cover"
+                      className="object-contain"
                       sizes="(max-width: 768px) 100vw, 448px"
                       onError={(e) => {
                         e.currentTarget.style.display = "none"
