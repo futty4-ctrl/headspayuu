@@ -65,13 +65,13 @@ export function Essences() {
         <div className="grid grid-cols-1 gap-5 sm:grid-cols-2">
           {essences.map((item, index) => (
             <FadeIn key={item.number} delay={index * 0.04}>
-              <div className="group relative aspect-video w-full overflow-hidden bg-zinc-800">
+              <div className="relative aspect-video w-full overflow-hidden bg-zinc-800">
                 {/* 画像 */}
                 <Image
                   src={`/images/essence-${item.number}.png`}
                   alt={item.text}
                   fill
-                  className="object-cover transition-transform duration-700 group-hover:scale-105"
+                  className="object-cover"
                   sizes="(max-width: 640px) 100vw, 50vw"
                   onError={(e) => {
                     e.currentTarget.style.display = "none"
