@@ -62,29 +62,31 @@ export function Essences() {
           </div>
         </FadeIn>
 
-        <div className="flex flex-col gap-6">
+        <div className="grid grid-cols-1 gap-5 sm:grid-cols-2">
           {essences.map((item, index) => (
             <FadeIn key={item.number} delay={index * 0.04}>
-              <div className="group flex items-start gap-4 border-b border-border/30 pb-5 transition-all duration-500 hover:border-gold/20 md:items-center md:gap-5">
-                {/* /images/essence-01.jpg ～ essence-10.jpg を配置 */}
-                <div className="relative h-20 w-20 shrink-0 overflow-hidden bg-zinc-800 md:h-24 md:w-24">
-                  <Image
-                    src={`/images/essence-${item.number}.png`}
-                    alt={item.text}
-                    fill
-                    className="object-contain"
-                    sizes="96px"
-                    onError={(e) => {
-                      e.currentTarget.style.display = "none"
-                    }}
-                  />
-                </div>
+              <div className="group relative aspect-video w-full overflow-hidden bg-zinc-800">
+                {/* 画像 */}
+                <Image
+                  src={`/images/essence-${item.number}.png`}
+                  alt={item.text}
+                  fill
+                  className="object-cover transition-transform duration-700 group-hover:scale-105"
+                  sizes="(max-width: 640px) 100vw, 50vw"
+                  onError={(e) => {
+                    e.currentTarget.style.display = "none"
+                  }}
+                />
 
-                <div className="flex flex-1 items-start gap-4 md:items-center">
-                  <span className="text-2xl font-light text-gold/30 transition-colors duration-500 group-hover:text-gold/60 lg:text-3xl">
+                {/* 暗めのグラデーションオーバーレイ */}
+                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent" />
+
+                {/* テキスト（左下に配置） */}
+                <div className="absolute bottom-0 left-0 p-5">
+                  <span className="mb-1 block font-serif text-2xl font-light text-gold/80">
                     {item.number}
                   </span>
-                  <p className="text-sm leading-[2.2] tracking-[0.08em] text-foreground/70 lg:text-[15px]">
+                  <p className="text-sm leading-[1.8] tracking-[0.08em] text-white/90">
                     {item.text}
                   </p>
                 </div>
