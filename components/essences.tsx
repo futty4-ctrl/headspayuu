@@ -77,19 +77,6 @@ export function Essences() {
                     e.currentTarget.style.display = "none"
                   }}
                 />
-
-                {/* 暗めのグラデーションオーバーレイ */}
-                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent" />
-
-                {/* テキスト（左下に配置） */}
-                <div className="absolute bottom-0 left-0 p-5">
-                  <span className="mb-1 block font-serif text-2xl font-light text-gold/80">
-                    {item.number}
-                  </span>
-                  <p className="text-sm leading-[1.8] tracking-[0.08em] text-white/90">
-                    {item.text}
-                  </p>
-                </div>
               </div>
             </FadeIn>
           ))}

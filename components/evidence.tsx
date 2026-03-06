@@ -9,7 +9,7 @@ const slides = Array.from({ length: 26 }, (_, i) => i + 1)
   .filter((n) => !excluded.includes(n))
   .map((n, i) => ({
     src: `/images/evidence-${String(n).padStart(2, "0")}.png`,
-    alt: `ビフォーアフター ${i + 1}枚目`,
+    alt: `Before & After ${i + 1}`,
   }))
 
 export function Evidence() {
@@ -42,7 +42,7 @@ export function Evidence() {
               EVIDENCE
             </span>
             <h2 className="text-2xl font-light tracking-[0.2em] text-foreground lg:text-3xl">
-              ビフォーアフター
+              Before & After
             </h2>
             <div className="mt-6 h-px w-14 bg-gold/40" />
           </div>
@@ -134,7 +134,7 @@ export function Evidence() {
                   className={`h-1.5 rounded-full transition-all duration-300 ${
                     i === current ? "w-6 bg-gold" : "w-1.5 bg-foreground/20"
                   }`}
-                  aria-label={`${i + 1}枚目`}
+                  aria-label={`Slide ${i + 1}`}
                 />
               ))}
             </div>
