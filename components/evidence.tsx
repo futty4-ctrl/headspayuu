@@ -1,6 +1,6 @@
 "use client"
 
-import { useState, useRef } from "react"
+import { useState, useRef, useEffect } from "react"
 import Image from "next/image"
 import { FadeIn } from "@/components/fade-in"
 
@@ -19,6 +19,14 @@ export function Evidence() {
 
   const prev = () => setCurrent((c) => (c === 0 ? slides.length - 1 : c - 1))
   const next = () => setCurrent((c) => (c === slides.length - 1 ? 0 : c + 1))
+
+  useEffect(() => {
+    if (slides.length <= 1) return
+    const interval = setInterval(() => {
+      setCurrent((c) => (c === slides.length - 1 ? 0 : c + 1))
+    }, 5000)
+    return () => clearInterval(interval)
+  }, [slides.length])
 
   const handleTouchStart = (e: React.TouchEvent) => {
     touchStartX.current = e.touches[0].clientX
