@@ -111,7 +111,18 @@ export function Header() {
                   <motion.a
                     key={link.href}
                     href={link.href}
-                    onClick={() => setIsMenuOpen(false)}
+                    onClick={(e) => {
+                      e.preventDefault()
+                      setIsMenuOpen(false)
+                      const targetId = link.href.replace("#", "")
+                      setTimeout(() => {
+                        const el = document.getElementById(targetId)
+                        if (el) {
+                          window.history.pushState(null, "", link.href)
+                          el.scrollIntoView({ behavior: "smooth" })
+                        }
+                      }, 400)
+                    }}
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: 0.15 + i * 0.06, duration: 0.5, ease: [0.25, 0.1, 0.25, 1] }}
