@@ -54,7 +54,7 @@ export function AccessMap() {
                 OPEN
               </p>
               <p className="text-xs tracking-[0.1em] text-foreground/80">
-                9:00 - 17:30
+                9:30 - 16:30
               </p>
             </div>
             <div className="bg-card px-3 py-4 md:px-4 md:py-5">

@@ -2,16 +2,20 @@
 
 import { FadeIn } from "@/components/fade-in"
 
-const links = [
-  "Scalp Care Head Spa",
-  "Hair Color Head Spa",
-  "Relaxation Head Spa",
-  "EVIDENCE",
-  "PRICE",
-  "FAQ",
-  "ONLINE STORE",
-  "御新規様特典",
+const links: { label: string; sectionId: string }[] = [
+  { label: "ABOUT", sectionId: "about" },
+  { label: "MENU", sectionId: "menu" },
+  { label: "ACCESS", sectionId: "access" },
+  { label: "FAQ", sectionId: "faq" },
 ]
+
+function scrollToSection(sectionId: string) {
+  const el = document.getElementById(sectionId)
+  if (el) {
+    window.history.pushState(null, "", `#${sectionId}`)
+    el.scrollIntoView({ behavior: "smooth" })
+  }
+}
 
 export function CategoryLinks() {
   return (
@@ -30,14 +34,18 @@ export function CategoryLinks() {
         </FadeIn>
 
         <div className="flex flex-col gap-2">
-          {links.map((label, index) => (
-            <FadeIn key={label} delay={index * 0.04}>
+          {links.map((item, index) => (
+            <FadeIn key={item.label} delay={index * 0.04}>
               <a
-                href="#"
+                href={`#${item.sectionId}`}
+                onClick={(e) => {
+                  e.preventDefault()
+                  scrollToSection(item.sectionId)
+                }}
                 className="group flex min-h-[44px] items-center justify-between rounded-sm border border-border/40 bg-card px-5 py-5 transition-all duration-500 hover:border-gold/30 md:px-6"
               >
                 <span className="text-sm tracking-[0.12em] text-foreground/80 transition-colors duration-500 group-hover:text-gold">
-                  {label}
+                  {item.label}
                 </span>
                 <svg
                   className="h-4 w-4 text-foreground/30 transition-all duration-500 group-hover:translate-x-1 group-hover:text-gold"

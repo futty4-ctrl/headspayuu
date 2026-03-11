@@ -49,7 +49,7 @@ export default function RootLayout({
     telephone: '092-284-9392',
     email: 'info@yuheadspa.net',
     url: 'https://www.yuheadspa.net',
-    openingHours: 'Mo,Tu,We,Th,Fr,Sa,Su 09:00-17:30',
+    openingHours: 'Mo,Tu,We,Th,Fr,Sa,Su 09:30-16:30',
     description:
       '福岡市西区豊浜の完全個室・1日3名限定のヘッドスパ専門店。ヒト幹細胞×専門技術による育毛・頭皮ケアに特化。',
     priceRange: '¥¥¥',
