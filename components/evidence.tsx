@@ -46,10 +46,10 @@ export function Evidence() {
         {/* セクションヘッダー */}
         <FadeIn>
           <div className="mb-16 flex flex-col items-center">
-            <span className="mb-2 text-sm font-medium tracking-[0.5em] text-gold/80 sm:text-base">
+            <span className="mb-2 text-base font-medium tracking-[0.5em] text-gold/80 sm:text-lg">
               EVIDENCE
             </span>
-            <h2 className="text-sm font-light tracking-[0.2em] text-foreground/80 lg:text-base">
+            <h2 className="text-base font-light tracking-[0.2em] text-foreground/80 sm:text-lg lg:text-xl">
               Before & After
             </h2>
           </div>
