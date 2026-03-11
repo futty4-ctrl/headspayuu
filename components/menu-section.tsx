@@ -170,14 +170,14 @@ export function MenuSection() {
             onValueChange={setActiveTab}
             className="w-full items-center"
           >
-            <TabsList className="mb-12 flex h-auto w-full flex-col gap-0 rounded-none bg-transparent p-0 sm:flex-row sm:gap-0 lg:mb-16">
+            <TabsList className="mb-12 flex h-auto w-full flex-col gap-px rounded-lg border border-border/40 bg-card/50 p-1 sm:flex-row sm:gap-0 sm:rounded-none sm:border-0 sm:border-b sm:border-border/30 sm:bg-transparent sm:p-0 lg:mb-16">
               {menus.map((menu, idx) => (
                 <TabsTrigger
                   key={menu.id}
                   value={menu.id}
-                  className="relative h-auto w-full rounded-none border-b border-border/30 bg-transparent px-3 py-4 text-[11px] tracking-[0.15em] text-foreground/40 transition-all duration-500 data-[state=active]:border-b-gold data-[state=active]:bg-transparent data-[state=active]:text-gold data-[state=active]:shadow-none sm:w-auto sm:flex-1 sm:py-5 lg:text-xs"
+                  className="relative h-auto w-full rounded-md border-0 border-b-0 py-4 text-sm font-medium tracking-[0.15em] text-foreground/70 transition-all duration-500 data-[state=active]:border-b-2 data-[state=active]:border-gold data-[state=active]:bg-gold/10 data-[state=active]:text-gold data-[state=active]:shadow-none sm:rounded-none sm:border-b sm:border-border/30 sm:bg-transparent sm:px-3 sm:py-5 sm:text-[11px] sm:font-normal sm:text-foreground/40 sm:data-[state=active]:border-b-gold sm:data-[state=active]:bg-transparent lg:text-xs"
                 >
-                  <span className="mr-2 text-[9px] opacity-40">
+                  <span className="mr-2 text-[10px] opacity-50 sm:text-[9px] sm:opacity-40">
                     {String(idx + 1).padStart(2, "0")}
                   </span>
                   {menu.tab}

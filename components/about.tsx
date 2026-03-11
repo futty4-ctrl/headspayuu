@@ -21,7 +21,7 @@ export function About() {
           </div>
         </FadeIn>
         <FadeIn>
-          <div className="mb-16 flex flex-col items-center">
+          <div className="mb-6 flex flex-col items-center">
             <span className="text-sm tracking-[0.5em] text-gold/80 sm:text-base">
               ABOUT
             </span>
@@ -30,10 +30,10 @@ export function About() {
 
         <FadeIn delay={0.1}>
           <div className="mb-20 text-center">
-            <p className="mb-2 text-xs tracking-[0.2em] text-gold/70">
+            <p className="mb-4 text-sm tracking-[0.2em] text-white sm:text-base">
               {'～当店について～'}
             </p>
-            <div className="mt-8 flex flex-col gap-8">
+            <div className="mt-4 flex flex-col gap-8">
               <p className="text-sm leading-[2.6] tracking-[0.08em] text-foreground/70 lg:text-[15px]">
                 福岡市西区豊浜にて
                 <br />
