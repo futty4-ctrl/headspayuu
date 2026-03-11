@@ -29,7 +29,7 @@ export function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 0.3, ease }}
-          className="mb-6 text-[11px] tracking-[0.5em] text-gold/80 sm:text-[10px]"
+          className="mb-6 text-lg tracking-[0.35em] text-gold/80 sm:text-xl md:tracking-[0.4em]"
         >
           {'【ヘッドスパ専門店ゆう】'}
         </motion.p>

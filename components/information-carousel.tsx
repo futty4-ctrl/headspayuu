@@ -14,43 +14,36 @@ const cards = [
   {
     title: "～ヘッドスパ×育毛～",
     text: "医師が通う程の高品質ヒト幹細胞×専門技術で、頭皮から美しさを底上げ。",
-    buttons: ["御予約", "メニュー"],
     image: "/images/menu-scalp.png",
   },
   {
     title: "～御新規様特典～",
     text: "数量限定ではございますが、ご新規様特典をご用意しております。この機会をぜひお見逃しなく。",
-    buttons: ["御予約", "特典詳細"],
     image: "/images/card-2-newcomer.png",
   },
   {
     title: "～ Customer Voices ～",
     text: "お客様より頂いた声を一部掲載。今後とも一人一人のお客様に誠心誠意対応して参ります。",
-    buttons: ["御予約", "お問い合わせ"],
     image: "/images/card-3-voices.png",
   },
   {
     title: "～ギフトカード～",
     text: "大切な方へ、誕生日・記念日・お礼に最適な特別な一枚です。",
-    buttons: ["詳細", "お問い合わせ"],
     image: "/images/card-4-giftcard.png",
   },
   {
     title: "～DRY HEADSPA ONLY～",
     text: "ついに大阪の地へ。皆様のご期待にお応えできますよう、心を込めてお迎えいたします。",
-    buttons: ["御予約", "公式HP"],
     image: "/images/card-5-osaka.png",
   },
   {
     title: "～ONLINE STORE～",
     text: "Members Only Online Store 入場にはPASSが必要です。詳細はお問い合わせくださいませ。",
-    buttons: ["お問い合わせ", "ONLINE STORE"],
     image: "/images/menu-color.png",
   },
   {
     title: "～ネット予約システム～",
     text: "当店は前日までに満席になります。至福の時間は、どうぞお早めに。24時間、オンラインにて受付中。",
-    buttons: ["御予約", "お問い合わせ"],
     image: "/images/card-7-booking.png",
   },
 ]
@@ -109,27 +102,6 @@ export function InformationCarousel() {
                       <p className="mb-6 flex-1 text-[11px] leading-[2.2] tracking-[0.03em] text-muted-foreground">
                         {card.text}
                       </p>
-                      <div className="flex gap-3">
-                        {card.buttons.map((btn) => (
-                          <a
-                            key={btn}
-                            href={btn === "御予約" ? "https://coubic.com/yuheadspa/services" : "#"}
-                            target={btn === "御予約" ? "_blank" : undefined}
-                            rel={btn === "御予約" ? "noopener noreferrer" : undefined}
-                            onClick={
-                              btn === "御予約"
-                                ? (e) => {
-                                    e.preventDefault()
-                                    window.open("https://coubic.com/yuheadspa/services", "_blank", "noopener,noreferrer")
-                                  }
-                                : undefined
-                            }
-                            className="border border-gold/40 px-4 py-2 text-[9px] tracking-[0.15em] text-gold transition-all duration-300 hover:bg-gold hover:text-background"
-                          >
-                            {btn}
-                          </a>
-                        ))}
-                      </div>
                     </div>
                   </div>
                 </CarouselItem>
