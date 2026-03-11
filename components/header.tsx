@@ -5,13 +5,10 @@ import { Menu, X } from "lucide-react"
 import { motion, AnimatePresence } from "framer-motion"
 
 const navLinks = [
-  { label: "INFORMATION", href: "#information" },
-  { label: "当店について", href: "#about" },
-  { label: "10のこだわり", href: "#essences" },
-  { label: "メニュー", href: "#menu" },
-  { label: "EVIDENCE", href: "#evidence" },
+  { label: "ABOUT", href: "#about" },
+  { label: "MENU", href: "#menu" },
+  { label: "ACCESS", href: "#access" },
   { label: "FAQ", href: "#faq" },
-  { label: "CATEGORY", href: "#category" },
 ]
 
 export function Header() {
