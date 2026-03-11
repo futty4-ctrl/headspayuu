@@ -157,7 +157,7 @@ export function MenuSection() {
         {/* Section heading */}
         <FadeIn>
           <div className="mb-14 flex flex-col items-center lg:mb-20">
-            <span className="text-sm tracking-[0.5em] text-gold/80 sm:text-base">
+            <span className="text-base tracking-[0.5em] text-gold/80 sm:text-lg">
               MENU
             </span>
           </div>

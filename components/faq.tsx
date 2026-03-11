@@ -57,10 +57,10 @@ export function Faq() {
       <div className="mx-auto max-w-3xl px-5 lg:px-10">
         <FadeIn>
           <div className="mb-16 flex flex-col items-center">
-            <span className="mb-3 text-[10px] tracking-[0.5em] text-gold/80">
+            <span className="mb-2 text-sm font-medium tracking-[0.5em] text-gold/80 sm:text-base">
               FAQ
             </span>
-            <h2 className="text-2xl font-light tracking-[0.2em] text-foreground lg:text-3xl">
+            <h2 className="text-sm font-light tracking-[0.2em] text-foreground/80 lg:text-base">
               よくあるご質問
             </h2>
           </div>

@@ -31,16 +31,25 @@ export function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 0.3, ease }}
-          className="mb-6 text-lg tracking-[0.35em] text-gold/80 sm:text-xl md:tracking-[0.4em]"
+          className="mb-2 text-[10px] tracking-[0.4em] text-foreground/40 sm:text-xs"
         >
-          {'【ヘッドスパ専門店ゆう】'}
+          ヘッドスパ専門店
         </motion.p>
 
         <motion.p
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1, delay: 0.5, ease }}
-          className="mb-8 text-base tracking-[0.3em] text-gold-light md:text-lg"
+          transition={{ duration: 1, delay: 0.45, ease }}
+          className="mb-2 text-lg tracking-[0.3em] text-gold-light/80 sm:text-2xl"
+        >
+          ゆう
+        </motion.p>
+
+        <motion.p
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1, delay: 0.55, ease }}
+          className="mb-8 text-base tracking-[0.3em] text-gold-light/80 md:text-lg"
         >
           {'～日常に静かな贅沢を～'}
         </motion.p>

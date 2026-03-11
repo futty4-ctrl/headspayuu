@@ -14,9 +14,6 @@ export function SiteFooter() {
             <span className="text-lg tracking-[0.3em] text-gold-light/80 lg:text-2xl">
               ゆう
             </span>
-            <p className="mt-3 text-[9px] tracking-[0.25em] text-foreground/25">
-              {'～日常に静かな贅沢を～'}
-            </p>
           </div>
         </FadeIn>
 

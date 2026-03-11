@@ -22,7 +22,7 @@ export function About() {
         </FadeIn>
         <FadeIn>
           <div className="mb-6 flex flex-col items-center">
-            <span className="text-sm tracking-[0.5em] text-gold/80 sm:text-base">
+            <span className="text-base tracking-[0.5em] text-gold/80 sm:text-lg">
               ABOUT
             </span>
           </div>
@@ -30,7 +30,7 @@ export function About() {
 
         <FadeIn delay={0.1}>
           <div className="mb-20 text-center">
-            <p className="mb-4 text-sm tracking-[0.2em] text-white sm:text-base">
+            <p className="mb-4 text-base tracking-[0.2em] text-white sm:text-lg">
               {'～当店について～'}
             </p>
             <div className="mt-4 flex flex-col gap-8">

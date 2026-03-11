@@ -55,6 +55,9 @@ export function Essences() {
             <span className="text-sm tracking-[0.5em] text-gold/80 sm:text-base">
               10 ESSENCES
             </span>
+            <span className="mt-1 text-xs tracking-[0.2em] text-white sm:text-sm">
+              こだわり
+            </span>
           </div>
         </FadeIn>
 

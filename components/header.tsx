@@ -100,7 +100,9 @@ export function Header() {
                 <span className="text-[10px] tracking-[0.4em] text-foreground/40">
                   ヘッドスパ専門店
                 </span>
-                <span className="mt-1 text-xl tracking-[0.3em] text-gold-light">ゆう</span>
+                <span className="mt-1 text-lg tracking-[0.3em] text-gold-light/80 sm:text-xl lg:text-2xl">
+                  ゆう
+                </span>
               </motion.div>
 
               <nav className="flex flex-col items-center gap-7">
