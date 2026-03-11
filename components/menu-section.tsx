@@ -12,37 +12,39 @@ const menus = [
     enTitle: "Scalp Care Head Spa",
     description: (
       <>
-        お客様指名No.1として名高い、
+        【Scalp Care Head Spa】
         <br />
-        頭皮と髪を根本からリセットするラグジュアリーな育毛ヘッドスパ。
+        お客様指名No.1として支持される、
         <br />
-        <br />
-        医師も推奨する上質なヒト脂肪由来幹細胞上清液から、
-        <br />
-        最先端のヒト臍帯由来幹細胞上清液まで、
-        <br />
-        グレードに応じたスペシャルケアをご提供。
+        頭皮と髪を根本から整えるラグジュアリーな育毛ヘッドスパ。
         <br />
         <br />
-        頭皮・髪・心まで満たす至福のスパ体験をお届けします。
+        医師も推奨する上質なヒト臍帯由来幹細胞上清液を贅沢に使用し、
+        <br />
+        頭皮環境を健やかに整え、ハリ・コシのある美しい髪へ導きます。
+        <br />
+        <br />
+        頭皮・髪・心まで満たされる、
+        <br />
+        至福のスパ体験をご提供いたします。
       </>
     ),
     items: [
       {
         name: "Scalp Care | Level 3",
-        detail: "ヒト臍帯由来",
+        detail: "ヒト臍帯由来Premium",
         duration: "90min",
         price: "¥35,000",
       },
       {
         name: "Scalp Care | Level 2",
-        detail: "ヒト臍帯由来",
+        detail: "ヒト臍帯由来Base",
         duration: "90min",
         price: "¥21,000",
       },
       {
         name: "Scalp Care | Level 1",
-        detail: "ヒト脂肪由来",
+        detail: "ヒト臍帯由来Light",
         duration: "90min",
         price: "¥18,000",
       },
@@ -81,7 +83,7 @@ const menus = [
     items: [
       {
         name: "Hair Color Head Spa + Scalp Care",
-        detail: "",
+        detail: "ヒト臍帯由来Base使用",
         duration: "90min",
         price: "¥26,000",
       },
@@ -89,7 +91,7 @@ const menus = [
         name: "Hair Color Head Spa",
         detail: "",
         duration: "90min",
-        price: "¥21,000",
+        price: "¥26,000",
       },
     ],
     steps: [
