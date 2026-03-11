@@ -40,7 +40,7 @@ export function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 0.45, ease }}
-          className="mb-2 text-lg tracking-[0.3em] text-gold-light/80 sm:text-2xl"
+          className="mb-2 text-base tracking-[0.3em] text-gold-light/80 sm:text-lg"
         >
           ゆう
         </motion.p>

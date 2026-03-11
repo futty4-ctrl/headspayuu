@@ -8,10 +8,10 @@ export function SiteFooter() {
       <div className="mx-auto max-w-6xl px-5 lg:px-10">
         <FadeIn>
           <div className="mb-10 flex flex-col items-center">
-            <span className="mb-1.5 text-[10px] tracking-[0.4em] text-foreground/40">
+            <span className="mb-1.5 text-[10px] tracking-[0.4em] text-foreground/40 sm:text-xs">
               ヘッドスパ専門店
             </span>
-            <span className="text-lg tracking-[0.3em] text-gold-light/80 lg:text-2xl">
+            <span className="text-base tracking-[0.3em] text-gold-light/80 sm:text-lg">
               ゆう
             </span>
           </div>

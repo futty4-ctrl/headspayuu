@@ -97,10 +97,10 @@ export function Header() {
                 transition={{ delay: 0.1, duration: 0.5 }}
                 className="mb-12 flex flex-col items-center"
               >
-                <span className="text-[10px] tracking-[0.4em] text-foreground/40">
+                <span className="text-[10px] tracking-[0.4em] text-foreground/40 sm:text-xs">
                   ヘッドスパ専門店
                 </span>
-                <span className="mt-1 text-lg tracking-[0.3em] text-gold-light/80 sm:text-xl lg:text-2xl">
+                <span className="mt-1 text-base tracking-[0.3em] text-gold-light/80 sm:text-lg">
                   ゆう
                 </span>
               </motion.div>
