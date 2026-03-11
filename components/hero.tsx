@@ -14,8 +14,9 @@ export function Hero() {
           src="/images/hero.jpg"
           alt="ヘッドスパ専門店ゆうの店内"
           fill
-          className="object-contain"
+          className="object-cover md:object-contain"
           sizes="100vw"
+          priority
           onError={(e) => {
             e.currentTarget.style.display = "none"
           }}
