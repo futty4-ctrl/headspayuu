@@ -62,23 +62,28 @@ export function Essences() {
           </div>
         </FadeIn>
 
-        <div className="grid grid-cols-1 gap-5 sm:grid-cols-2">
+        {/* スマホ: 横スライド / タブレット以上: 2列グリッド */}
+        <div className="flex gap-4 overflow-x-auto snap-x snap-mandatory pb-4 -mx-5 px-5 sm:mx-0 sm:px-0 sm:pb-0 sm:grid sm:grid-cols-2 sm:gap-5 sm:overflow-visible sm:snap-none">
           {essences.map((item, index) => (
-            <FadeIn key={item.number} delay={index * 0.04}>
-              <div className="relative aspect-video w-full overflow-hidden bg-zinc-800">
-                {/* 画像 */}
-                <Image
-                  src={`/images/essence-${item.number}.png`}
-                  alt={item.text}
-                  fill
-                  className="object-contain"
-                  sizes="(max-width: 640px) 100vw, 50vw"
-                  onError={(e) => {
-                    e.currentTarget.style.display = "none"
-                  }}
-                />
-              </div>
-            </FadeIn>
+            <div
+              key={item.number}
+              className="flex-shrink-0 w-[85vw] max-w-[340px] snap-center sm:w-full sm:max-w-none"
+            >
+              <FadeIn delay={index * 0.04}>
+                <div className="relative aspect-video w-full overflow-hidden rounded-sm bg-zinc-800">
+                  <Image
+                    src={`/images/essence-${item.number}.png`}
+                    alt={item.text}
+                    fill
+                    className="object-contain"
+                    sizes="(max-width: 640px) 85vw, 50vw"
+                    onError={(e) => {
+                      e.currentTarget.style.display = "none"
+                    }}
+                  />
+                </div>
+              </FadeIn>
+            </div>
           ))}
         </div>
       </div>
