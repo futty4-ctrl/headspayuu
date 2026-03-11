@@ -82,8 +82,8 @@ const menus = [
     ),
     items: [
       {
-        name: "Hair Color Head Spa",
-        detail: "",
+        name: "Hair Color Head Spa + Scalp Care",
+        detail: "ヒト臍帯由来Base使用",
         duration: "90min",
         price: "¥26,000",
       },
