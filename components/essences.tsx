@@ -52,10 +52,9 @@ export function Essences() {
       <div className="mx-auto max-w-6xl px-5 lg:px-10">
         <FadeIn>
           <div className="mb-16 flex flex-col items-center lg:mb-20">
-            <span className="mb-3 text-sm tracking-[0.5em] text-gold/80 sm:text-base">
+            <span className="text-sm tracking-[0.5em] text-gold/80 sm:text-base">
               10 ESSENCES
             </span>
-            <div className="mt-6 h-px w-14 bg-gold/40" />
           </div>
         </FadeIn>
 

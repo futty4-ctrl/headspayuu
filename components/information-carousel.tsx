@@ -54,10 +54,9 @@ export function InformationCarousel() {
       <div className="mx-auto max-w-6xl px-5 lg:px-10">
         <FadeIn>
           <div className="mb-16 flex flex-col items-center">
-            <span className="mb-3 text-[10px] tracking-[0.5em] text-gold/80">
+            <span className="text-sm font-medium tracking-[0.5em] text-gold sm:text-base">
               INFORMATION
             </span>
-            <div className="mt-4 h-px w-14 bg-gold/40" />
           </div>
         </FadeIn>
 

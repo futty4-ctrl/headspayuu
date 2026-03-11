@@ -22,10 +22,9 @@ export function About() {
         </FadeIn>
         <FadeIn>
           <div className="mb-16 flex flex-col items-center">
-            <span className="mb-3 text-sm tracking-[0.5em] text-gold/80 sm:text-base">
+            <span className="text-sm tracking-[0.5em] text-gold/80 sm:text-base">
               ABOUT
             </span>
-            <div className="mt-6 h-px w-14 bg-gold/40" />
           </div>
         </FadeIn>
 

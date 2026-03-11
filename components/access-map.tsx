@@ -14,7 +14,6 @@ export function AccessMap() {
             <h2 className="text-2xl font-light tracking-[0.2em] text-foreground lg:text-3xl">
               アクセス
             </h2>
-            <div className="mt-6 h-px w-14 bg-gold/40" />
           </div>
         </FadeIn>
 
