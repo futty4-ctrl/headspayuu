@@ -40,6 +40,7 @@ const cards = [
     title: "～ONLINE STORE～",
     text: "Members Only Online Store 入場にはPASSが必要です。詳細はお問い合わせくださいませ。",
     image: "/images/menu-color.png",
+    link: "https://headspayu.stores.jp/",
   },
   {
     title: "～ネット予約システム～",
@@ -101,6 +102,16 @@ export function InformationCarousel() {
                       <p className="mb-6 flex-1 text-[11px] leading-[2.2] tracking-[0.03em] text-muted-foreground">
                         {card.text}
                       </p>
+                      {card.link && (
+                        <a
+                          href={card.link}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="mt-auto inline-flex items-center justify-center border border-gold/60 px-4 py-2 text-[10px] tracking-[0.18em] text-gold transition-all duration-300 hover:bg-gold hover:text-background"
+                        >
+                          ONLINE STORE
+                        </a>
+                      )}
                     </div>
                   </div>
                 </CarouselItem>

@@ -56,7 +56,7 @@ export function Essences() {
               10 ESSENCES
             </span>
             <span className="mt-2 text-base tracking-[0.2em] text-white sm:text-lg">
-              こだわり
+              〜こだわり〜
             </span>
           </div>
         </FadeIn>
