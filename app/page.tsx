@@ -1,4 +1,5 @@
 import { Header } from "@/components/header"
+import { FloatingReserve } from "@/components/floating-reserve"
 import { Hero } from "@/components/hero"
 import { InformationCarousel } from "@/components/information-carousel"
 import { About } from "@/components/about"
@@ -14,6 +15,7 @@ export default function Home() {
   return (
     <main>
       <Header />
+      <FloatingReserve />
       <Hero />
       <InformationCarousel />
       <About />

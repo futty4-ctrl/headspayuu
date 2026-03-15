@@ -1,6 +1,7 @@
 "use client"
 
 import { useState } from "react"
+import Image from "next/image"
 import { AnimatePresence, motion } from "framer-motion"
 import { FadeIn } from "@/components/fade-in"
 import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs"
@@ -196,12 +197,25 @@ export function MenuSection() {
             exit={{ opacity: 0, y: -10 }}
             transition={{ duration: 0.5, ease: [0.21, 0.47, 0.32, 0.98] }}
           >
-            {/* Dark placeholder background */}
+            {/* リラクゼーション時はキャンドル画像背景、それ以外はダーク背景 */}
             <div className="relative">
-              <div
-                className="absolute inset-0 -m-4 bg-zinc-900/40 lg:-m-6"
-                aria-hidden="true"
-              />
+              {activeTab === "relaxation" ? (
+                <div className="absolute inset-0 -m-4 overflow-hidden rounded-sm lg:-m-6" aria-hidden="true">
+                  <Image
+                    src="/images/relaxation-bg.png"
+                    alt=""
+                    fill
+                    className="object-cover object-center"
+                    sizes="(max-width: 1024px) 100vw, 1024px"
+                  />
+                  <div className="absolute inset-0 bg-black/55" aria-hidden="true" />
+                </div>
+              ) : (
+                <div
+                  className="absolute inset-0 -m-4 bg-zinc-900/40 lg:-m-6"
+                  aria-hidden="true"
+                />
+              )}
 
               <div className="relative border border-border/40 bg-card p-6 lg:p-10">
                 {/* Title */}
