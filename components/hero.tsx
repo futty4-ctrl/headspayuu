@@ -8,14 +8,14 @@ const ease = [0.25, 0.1, 0.25, 1]
 export function Hero() {
   return (
     <section className="relative flex min-h-screen items-center justify-center overflow-hidden">
-      {/* Hero background - スマホは横切れしないようobject-contain、タブレット以上は従来どおり */}
+      {/* Hero background - スマホは縦を控えめに拡大(108%)で少し背を伸ばしつつ見切れを抑える */}
       <div className="absolute inset-0 flex items-center justify-center overflow-hidden bg-zinc-800" aria-hidden="true">
-        <div className="relative h-full w-full origin-center scale-y-105 md:scale-y-100">
+        <div className="relative h-full w-full origin-center scale-y-[1.08] md:scale-y-100">
           <Image
             src="/images/hero.jpg"
             alt="ヘッドスパ専門店ゆうの店内"
             fill
-            className="object-contain object-center md:object-contain"
+            className="object-contain object-center object-top md:object-center md:object-contain"
             sizes="100vw"
             priority
             onError={(e) => {
