@@ -33,6 +33,15 @@ export function About() {
             <p className="mb-4 text-base tracking-[0.2em] text-white sm:text-lg">
               {'～当店について～'}
             </p>
+            <div className="relative mx-auto mb-8 aspect-[4/3] w-full max-w-xl overflow-hidden rounded-sm border border-border/30">
+              <Image
+                src="/images/about-interior.png"
+                alt="当店の施術ルーム"
+                fill
+                className="object-cover"
+                sizes="(max-width: 640px) 100vw, 576px"
+              />
+            </div>
             <div className="mt-4 flex flex-col gap-8">
               <p className="text-sm leading-[2.6] tracking-[0.08em] text-foreground/70 lg:text-[15px]">
                 福岡市西区豊浜にて

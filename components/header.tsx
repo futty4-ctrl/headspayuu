@@ -4,6 +4,9 @@ import { useState, useEffect } from "react"
 import { Menu, X } from "lucide-react"
 import { motion, AnimatePresence } from "framer-motion"
 
+const COUBIC_URL = "https://coubic.com/yuheadspa/services"
+const LINE_URL = "https://lin.ee/7hso3k1"
+
 const navLinks = [
   { label: "ABOUT", href: "#about" },
   { label: "MENU", href: "#menu" },
@@ -154,6 +157,35 @@ export function Header() {
                 <span className="text-[9px] tracking-[0.15em] text-foreground/30">
                   24時間ネット予約受付中
                 </span>
+                <div className="mt-3 flex flex-wrap items-center justify-center gap-4 text-[10px] tracking-[0.12em] text-foreground/60">
+                  <a
+                    href={COUBIC_URL}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    onClick={(e) => {
+                      e.preventDefault()
+                      setIsMenuOpen(false)
+                      window.open(COUBIC_URL, "_blank", "noopener,noreferrer")
+                    }}
+                    className="transition-colors hover:text-gold"
+                  >
+                    空き状況を見る
+                  </a>
+                  <span className="text-foreground/30">｜</span>
+                  <a
+                    href={LINE_URL}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    onClick={(e) => {
+                      e.preventDefault()
+                      setIsMenuOpen(false)
+                      window.open(LINE_URL, "_blank", "noopener,noreferrer")
+                    }}
+                    className="transition-colors hover:text-gold"
+                  >
+                    LINEで相談
+                  </a>
+                </div>
               </motion.div>
             </div>
           </motion.div>
