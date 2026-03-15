@@ -223,7 +223,7 @@ export function MenuSection() {
                     className="object-cover object-center"
                     sizes="(max-width: 1024px) 100vw, 1024px"
                   />
-                  <div className="absolute inset-0 bg-black/55" aria-hidden="true" />
+                  <div className="absolute inset-0 bg-black/35" aria-hidden="true" />
                 </div>
               ) : (
                 <div
@@ -232,7 +232,11 @@ export function MenuSection() {
                 />
               )}
 
-              <div className="relative border border-border/40 bg-card p-6 lg:p-10">
+              <div
+                className={`relative border border-border/40 p-6 lg:p-10 ${
+                  activeTab === "relaxation" ? "bg-background/70 backdrop-blur-sm" : "bg-card"
+                }`}
+              >
                 {/* Title */}
                 <div className="mb-8 text-center lg:mb-10">
                   <h3 className="mb-2 text-lg tracking-[0.15em] text-foreground lg:text-xl">
@@ -293,7 +297,9 @@ export function MenuSection() {
                     {activeMenu.steps.map((step) => (
                       <div
                         key={step}
-                        className="flex items-center justify-center bg-card px-3 py-3 text-center"
+                        className={`flex items-center justify-center px-3 py-3 text-center ${
+                          activeTab === "relaxation" ? "bg-background/60 backdrop-blur-[2px]" : "bg-card"
+                        }`}
                       >
                         <span className="text-[11px] tracking-[0.08em] text-foreground/60">
                           {step}
