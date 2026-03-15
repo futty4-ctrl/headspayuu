@@ -1,7 +1,6 @@
 "use client"
 
 import { useState } from "react"
-import Image from "next/image"
 import { AnimatePresence, motion } from "framer-motion"
 import { FadeIn } from "@/components/fade-in"
 import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs"
@@ -212,34 +211,109 @@ export function MenuSection() {
             exit={{ opacity: 0, y: -10 }}
             transition={{ duration: 0.5, ease: [0.21, 0.47, 0.32, 0.98] }}
           >
-            {/* リラクゼーション時はキャンドル画像背景、それ以外はダーク背景 */}
+            {/* リラクゼーション時は背景画像に直接テキストを重ね（オーバーレイなし）、それ以外はダーク背景 */}
             <div className="relative">
               {activeTab === "relaxation" ? (
-                <div className="absolute inset-0 -m-4 overflow-hidden rounded-sm lg:-m-6" aria-hidden="true">
-                  <Image
-                    src="/images/relaxation-bg.png"
-                    alt=""
-                    fill
-                    className="object-cover object-center"
-                    sizes="(max-width: 1024px) 100vw, 1024px"
-                  />
-                  <div className="absolute inset-0 bg-black/35" aria-hidden="true" />
+                <div
+                  className="relative -m-4 w-full min-h-[420px] bg-cover bg-center rounded-sm overflow-hidden lg:-m-6"
+                  style={{ backgroundImage: "url('/images/relaxation-bg.png')" }}
+                >
+                  <div className="relative z-10 p-6 text-center text-white lg:p-10">
+                <>
+                  <div className="mb-8 text-center lg:mb-10">
+                    <h3 className="mb-2 text-lg tracking-[0.15em] text-white drop-shadow-lg lg:text-xl">
+                      {"【"}
+                      {activeMenu.enTitle}
+                      {"】"}
+                    </h3>
+                    <div className="mx-auto mt-4 h-px w-10 bg-gold/30" />
+                  </div>
+                  <p className="mx-auto mb-10 max-w-2xl text-center text-xs leading-[2.4] tracking-[0.03em] text-white/95 drop-shadow-lg lg:text-left lg:text-[13px]">
+                    {activeMenu.description}
+                  </p>
+                  <div className="mb-10 border-t border-white/20">
+                    {activeMenu.items.map((item, idx) => (
+                      <div
+                        key={item.name}
+                        className={`flex flex-col items-center justify-between gap-3 py-6 sm:flex-row ${
+                          idx < activeMenu.items.length - 1 ? "border-b border-white/15" : ""
+                        }`}
+                      >
+                        <div className="text-center sm:text-left">
+                          <p className="text-sm tracking-[0.08em] text-white drop-shadow-lg">
+                            {item.name}
+                          </p>
+                          {item.detail && (
+                            <p className="mt-1 text-[10px] tracking-[0.05em] text-white/80 drop-shadow-lg">
+                              ({item.detail})
+                            </p>
+                          )}
+                        </div>
+                        <div className="flex shrink-0 items-baseline gap-3">
+                          <span className="text-[10px] tracking-[0.1em] text-white/70 drop-shadow-lg">
+                            {item.duration}/
+                          </span>
+                          <span className="text-xl font-light tracking-[0.05em] text-gold drop-shadow-lg lg:text-2xl">
+                            {item.price}
+                          </span>
+                          <span className="text-[9px] text-white/60 drop-shadow-lg">
+                            (税込)
+                          </span>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                  <div className="mb-10">
+                    <p className="mb-5 text-center text-[10px] tracking-[0.3em] text-gold-light/90 drop-shadow-lg">
+                      施術内容
+                    </p>
+                    <div className="grid grid-cols-2 gap-px bg-white/10 sm:grid-cols-3">
+                      {activeMenu.steps.map((step) => (
+                        <div
+                          key={step}
+                          className="flex items-center justify-center bg-black/20 px-3 py-3 text-center"
+                        >
+                          <span className="text-[11px] tracking-[0.08em] text-white/90 drop-shadow-lg">
+                            {step}
+                          </span>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                  <div className="flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
+                    <a
+                      href="https://coubic.com/yuheadspa/services"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      onClick={(e) => {
+                        e.preventDefault()
+                        window.open("https://coubic.com/yuheadspa/services", "_blank", "noopener,noreferrer")
+                      }}
+                      className="flex min-h-[44px] w-full items-center justify-center border border-gold bg-gold px-10 py-3 text-center text-[11px] tracking-[0.2em] text-background transition-all duration-300 hover:bg-transparent hover:text-gold sm:w-auto"
+                    >
+                      御予約
+                    </a>
+                    <a
+                      href="#"
+                      className="flex min-h-[44px] w-full items-center justify-center border border-foreground/20 px-10 py-3 text-center text-[11px] tracking-[0.2em] text-white transition-all duration-300 hover:border-gold/50 hover:text-gold sm:w-auto"
+                    >
+                      お問い合わせ
+                    </a>
+                  </div>
+                </>
+                  </div>
                 </div>
               ) : (
+                <>
                 <div
                   className="absolute inset-0 -m-4 bg-zinc-900/40 lg:-m-6"
                   aria-hidden="true"
                 />
-              )}
 
-              <div
-                className={`relative border border-border/40 p-6 lg:p-10 ${
-                  activeTab === "relaxation" ? "bg-background/70 backdrop-blur-sm" : "bg-card"
-                }`}
-              >
+              <div className="relative border border-border/40 bg-card p-6 lg:p-10">
                 {/* Title */}
                 <div className="mb-8 text-center lg:mb-10">
-                  <h3 className="mb-2 text-lg tracking-[0.15em] text-foreground lg:text-xl">
+                  <h3 className={`mb-2 text-lg tracking-[0.15em] lg:text-xl ${activeTab === "relaxation" ? "text-white" : "text-foreground"}`}>
                     {"【"}
                     {activeMenu.enTitle}
                     {"】"}
@@ -248,39 +322,41 @@ export function MenuSection() {
                 </div>
 
                 {/* Description */}
-                <p className="mx-auto mb-10 max-w-2xl text-center text-xs leading-[2.4] tracking-[0.03em] text-muted-foreground lg:text-left lg:text-[13px]">
+                <p className={`mx-auto mb-10 max-w-2xl text-center text-xs leading-[2.4] tracking-[0.03em] lg:text-left lg:text-[13px] ${activeTab === "relaxation" ? "text-white/95" : "text-muted-foreground"}`}>
                   {activeMenu.description}
                 </p>
 
                 {/* Pricing items */}
-                <div className="mb-10 border-t border-border/30">
+                <div className={`mb-10 ${activeTab === "relaxation" ? "border-t border-white/20" : "border-t border-border/30"}`}>
                   {activeMenu.items.map((item, idx) => (
                     <div
                       key={item.name}
                       className={`flex flex-col items-center justify-between gap-3 py-6 sm:flex-row ${
                         idx < activeMenu.items.length - 1
-                          ? "border-b border-border/20"
+                          ? activeTab === "relaxation"
+                            ? "border-b border-white/15"
+                            : "border-b border-border/20"
                           : ""
                       }`}
                     >
                       <div className="text-center sm:text-left">
-                        <p className="text-sm tracking-[0.08em] text-foreground">
+                        <p className={`text-sm tracking-[0.08em] ${activeTab === "relaxation" ? "text-white" : "text-foreground"}`}>
                           {item.name}
                         </p>
                         {item.detail && (
-                          <p className="mt-1 text-[10px] tracking-[0.05em] text-muted-foreground">
+                          <p className={`mt-1 text-[10px] tracking-[0.05em] ${activeTab === "relaxation" ? "text-white/80" : "text-muted-foreground"}`}>
                             ({item.detail})
                           </p>
                         )}
                       </div>
                       <div className="flex shrink-0 items-baseline gap-3">
-                        <span className="text-[10px] tracking-[0.1em] text-muted-foreground/60">
+                        <span className={`text-[10px] tracking-[0.1em] ${activeTab === "relaxation" ? "text-white/70" : "text-muted-foreground/60"}`}>
                           {item.duration}/
                         </span>
                         <span className="text-xl font-light tracking-[0.05em] text-gold lg:text-2xl">
                           {item.price}
                         </span>
-                        <span className="text-[9px] text-muted-foreground/50">
+                        <span className={`text-[9px] ${activeTab === "relaxation" ? "text-white/60" : "text-muted-foreground/50"}`}>
                           (税込)
                         </span>
                       </div>
@@ -290,18 +366,18 @@ export function MenuSection() {
 
                 {/* Treatment steps grid */}
                 <div className="mb-10">
-                  <p className="mb-5 text-center text-[10px] tracking-[0.3em] text-gold/60">
+                  <p className={`mb-5 text-center text-[10px] tracking-[0.3em] ${activeTab === "relaxation" ? "text-gold-light/90" : "text-gold/60"}`}>
                     施術内容
                   </p>
-                  <div className="grid grid-cols-2 gap-px bg-border/20 sm:grid-cols-3">
+                  <div className={`grid grid-cols-2 gap-px sm:grid-cols-3 ${activeTab === "relaxation" ? "bg-white/10" : "bg-border/20"}`}>
                     {activeMenu.steps.map((step) => (
                       <div
                         key={step}
                         className={`flex items-center justify-center px-3 py-3 text-center ${
-                          activeTab === "relaxation" ? "bg-background/60 backdrop-blur-[2px]" : "bg-card"
+                          activeTab === "relaxation" ? "bg-black/25" : "bg-card"
                         }`}
                       >
-                        <span className="text-[11px] tracking-[0.08em] text-foreground/60">
+                        <span className={`text-[11px] tracking-[0.08em] ${activeTab === "relaxation" ? "text-white/90" : "text-foreground/60"}`}>
                           {step}
                         </span>
                       </div>
