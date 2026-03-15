@@ -31,7 +31,7 @@ export function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 0.3, ease }}
-          className="mb-2 text-[10px] tracking-[0.4em] text-foreground/40 sm:text-xs"
+          className="mb-2 text-sm tracking-[0.4em] text-foreground/40 sm:text-base"
         >
           ヘッドスパ専門店
         </motion.p>

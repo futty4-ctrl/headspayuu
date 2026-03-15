@@ -7,6 +7,44 @@ import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs"
 
 const menus = [
   {
+    id: "relaxation",
+    tab: "リラクゼーション",
+    enTitle: "Relaxation Head Spa",
+    description: (
+      <>
+        オールハンドで頭・首・額の筋膜を丹念にほぐし、
+        <br />
+        アロマクリームバス・スチーム・ホットストーンで血流とリンパを極上に活性化。
+        <br />
+        <br />
+        電気バリブラシと頭皮化粧水で頭皮を整え、眼精疲労を解き放ち、フェイスラインと頭皮を優美にリフトアップ。
+        <br />
+        五感すべてに響く、唯一無二の至福体験をお届けします。
+      </>
+    ),
+    items: [
+      {
+        name: "Relaxation Head Spa",
+        detail: "",
+        duration: "90min",
+        price: "¥16,000",
+      },
+    ],
+    steps: [
+      "ブラッシング",
+      "足湯",
+      "カッサ",
+      "アロマクリームスパ",
+      "ホットストーン",
+      "ホットスチーム",
+      "濃密泡シャンプー",
+      "高保水Wトリートメント",
+      "頭皮保湿",
+      "電気バリブラシ",
+      "ヘアドライ",
+    ],
+  },
+  {
     id: "scalp",
     tab: "育毛×ヘッドスパ",
     enTitle: "Scalp Care Head Spa",
@@ -107,48 +145,10 @@ const menus = [
       "ヘアドライ",
     ],
   },
-  {
-    id: "relaxation",
-    tab: "リラクゼーション",
-    enTitle: "Relaxation Head Spa",
-    description: (
-      <>
-        オールハンドで頭・首・額の筋膜を丹念にほぐし、
-        <br />
-        アロマクリームバス・スチーム・ホットストーンで血流とリンパを極上に活性化。
-        <br />
-        <br />
-        電気バリブラシと頭皮化粧水で頭皮を整え、眼精疲労を解き放ち、フェイスラインと頭皮を優美にリフトアップ。
-        <br />
-        五感すべてに響く、唯一無二の至福体験をお届けします。
-      </>
-    ),
-    items: [
-      {
-        name: "Relaxation Head Spa",
-        detail: "",
-        duration: "90min",
-        price: "¥16,000",
-      },
-    ],
-    steps: [
-      "ブラッシング",
-      "足湯",
-      "カッサ",
-      "アロマクリームスパ",
-      "ホットストーン",
-      "ホットスチーム",
-      "濃密泡シャンプー",
-      "高保水Wトリートメント",
-      "頭皮保湿",
-      "電気バリブラシ",
-      "ヘアドライ",
-    ],
-  },
 ]
 
 export function MenuSection() {
-  const [activeTab, setActiveTab] = useState("scalp")
+  const [activeTab, setActiveTab] = useState("relaxation")
   const activeMenu = menus.find((m) => m.id === activeTab)!
 
   return (
