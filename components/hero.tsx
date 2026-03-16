@@ -7,16 +7,16 @@ const ease = [0.25, 0.1, 0.25, 1]
 
 export function Hero() {
   return (
-    <section className="relative min-h-[110vh] overflow-hidden md:min-h-screen">
+    <section className="relative h-[110vh] overflow-hidden md:h-screen">
       {/* 写真コンテナ: relative にして、この中にテキストを重ねる */}
       <div className="relative flex h-full w-full items-center justify-center overflow-hidden bg-zinc-800">
-        {/* Hero background - スマホは縦を少し強めに拡大(116%)して、全体を大きく見せつつ見切れを抑える */}
-        <div className="relative h-full w-full origin-center scale-y-[1.16] md:scale-y-100">
+        {/* Hero background */}
+        <div className="relative h-full w-full">
           <Image
             src="/images/hero.jpg"
             alt="ヘッドスパ専門店ゆうの店内"
             fill
-            className="object-contain object-center object-top md:object-center md:object-contain"
+            className="object-cover object-center"
             sizes="100vw"
             priority
             onError={(e) => {
@@ -25,7 +25,7 @@ export function Hero() {
           />
         </div>
 
-        {/* 写真の上に重ねるテキスト＆ボタン（中央やや下寄せ） */}
+        {/* 写真の上に重ねるテキスト（中央やや下寄せ） */}
         <div className="pointer-events-none absolute inset-x-0 bottom-[12vh] z-10 flex justify-center px-6 text-center">
           <div className="pointer-events-auto flex max-w-xl flex-col items-center">
         <motion.p
@@ -59,39 +59,14 @@ export function Hero() {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 0.7, ease }}
-          className="mb-10 flex flex-col items-center gap-2 text-center text-sm leading-[2.2] tracking-[0.2em] text-foreground/90 md:text-base"
+          className="flex flex-col items-center gap-2 text-center text-sm leading-[2.2] tracking-[0.2em] text-foreground/90 md:text-base"
         >
           <span>完全個室・1日3名様限定</span>
           <span>熟練のオールハンドで行う</span>
           <span>ヘッドスパ専門店</span>
         </motion.h1>
-
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1, delay: 1.0, ease }}
-          className="flex flex-row gap-4"
-        >
-          <a
-            href="https://coubic.com/yuheadspa/services"
-            target="_blank"
-            rel="noopener noreferrer"
-            onClick={(e) => {
-              e.preventDefault()
-              window.open("https://coubic.com/yuheadspa/services", "_blank", "noopener,noreferrer")
-            }}
-            className="flex min-h-[44px] items-center justify-center border border-foreground/40 px-6 py-3 text-[11px] tracking-[0.2em] text-foreground transition-all duration-300 hover:border-gold hover:text-gold"
-          >
-            今すぐ予約
-          </a>
-          <a
-            href="#about"
-            className="flex min-h-[44px] items-center justify-center border border-foreground/40 px-6 py-3 text-[11px] tracking-[0.2em] text-foreground transition-all duration-300 hover:border-gold hover:text-gold"
-          >
-            初めての方へ
-          </a>
-        </motion.div>
-      </div>
+          </div>
+        </div>
       </div>
     </section>
   )
