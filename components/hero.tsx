@@ -7,7 +7,7 @@ const ease = [0.25, 0.1, 0.25, 1]
 
 export function Hero() {
   return (
-    <section className="relative flex min-h-[110vh] items-center justify-center overflow-hidden md:min-h-screen">
+    <section className="relative min-h-[110vh] overflow-hidden md:min-h-screen">
       {/* Hero background - スマホは縦を少し強めに拡大(116%)して、全体を大きく見せつつ見切れを抑える */}
       <div className="absolute inset-0 flex items-center justify-center overflow-hidden bg-zinc-800" aria-hidden="true">
         <div className="relative h-full w-full origin-center scale-y-[1.16] md:scale-y-100">
@@ -25,7 +25,9 @@ export function Hero() {
         </div>
       </div>
 
-      <div className="relative z-10 flex flex-col items-center px-6 text-center">
+      {/* 写真の上に重ねるテキスト＆ボタン（中央やや下寄せ） */}
+      <div className="pointer-events-none absolute inset-x-0 bottom-[12vh] z-10 flex justify-center px-6 text-center">
+        <div className="pointer-events-auto flex max-w-xl flex-col items-center">
         <motion.p
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -89,8 +91,8 @@ export function Hero() {
             初めての方へ
           </a>
         </motion.div>
+        </div>
       </div>
-
     </section>
   )
 }
