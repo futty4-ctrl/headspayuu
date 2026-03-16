@@ -24,14 +24,13 @@ export function Hero() {
           />
         </div>
       </div>
-      <div className="absolute inset-0 bg-black/50" aria-hidden="true" />
 
       <div className="relative z-10 flex flex-col items-center px-6 text-center">
         <motion.p
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 0.3, ease }}
-          className="mb-2 text-sm tracking-[0.4em] text-foreground/40 sm:text-base"
+          className="mb-2 text-sm tracking-[0.4em] text-foreground/70 drop-shadow-[0_2px_6px_rgba(0,0,0,0.9)] sm:text-base"
         >
           ヘッドスパ専門店
         </motion.p>
@@ -40,7 +39,7 @@ export function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 0.45, ease }}
-          className="mb-2 text-base tracking-[0.3em] text-gold-light/80 sm:text-lg"
+          className="mb-2 text-base tracking-[0.3em] text-gold-light/90 drop-shadow-[0_2px_6px_rgba(0,0,0,0.9)] sm:text-lg"
         >
           ゆう
         </motion.p>
@@ -49,7 +48,7 @@ export function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 0.55, ease }}
-          className="mb-8 text-base tracking-[0.3em] text-gold-light/80 md:text-lg"
+          className="mb-8 text-base tracking-[0.3em] text-gold-light/90 drop-shadow-[0_2px_6px_rgba(0,0,0,0.9)] md:text-lg"
         >
           {'～日常に静かな贅沢を～'}
         </motion.p>
