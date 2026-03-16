@@ -54,19 +54,30 @@ export function Header() {
             <Menu className="h-5 w-5" />
           </button>
 
-          {/* Center: Reservation button - white bg, rounded, black text */}
-          <a
-            href="https://coubic.com/yuheadspa/services"
-            target="_blank"
-            rel="noopener noreferrer"
-            onClick={(e) => {
-              e.preventDefault()
-              window.open("https://coubic.com/yuheadspa/services", "_blank", "noopener,noreferrer")
-            }}
-            className="flex min-h-[44px] items-center justify-center rounded-full bg-foreground px-6 py-2 text-[11px] tracking-[0.15em] text-background transition-all duration-300 hover:bg-gold hover:text-background sm:text-[10px]"
-          >
-            45秒で予約
-          </a>
+          {/* Center: 空き状況 / LINE リンク */}
+          <div className="flex items-center gap-4 text-[11px] tracking-[0.15em] text-foreground/80 sm:text-[10px]">
+            <button
+              type="button"
+              onClick={(e) => {
+                e.preventDefault()
+                window.open(COUBIC_URL, "_blank", "noopener,noreferrer")
+              }}
+              className="transition-colors hover:text-gold"
+            >
+              空き状況を見る
+            </button>
+            <span className="text-foreground/40">｜</span>
+            <button
+              type="button"
+              onClick={(e) => {
+                e.preventDefault()
+                window.open(LINE_URL, "_blank", "noopener,noreferrer")
+              }}
+              className="transition-colors hover:text-gold"
+            >
+              LINEで相談
+            </button>
+          </div>
 
           {/* Right: Logo placeholder */}
           <div className="flex h-8 w-8 items-center justify-center rounded-full bg-muted" aria-label="店舗ロゴ">
