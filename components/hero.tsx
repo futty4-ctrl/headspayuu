@@ -7,7 +7,7 @@ const ease = [0.25, 0.1, 0.25, 1]
 
 export function Hero() {
   return (
-    <section className="relative h-[110vh] overflow-hidden md:h-screen">
+    <section className="relative h-[90vh] overflow-hidden md:h-screen">
       {/* 写真コンテナ: relative にして、この中にテキストを重ねる */}
       <div className="relative flex h-full w-full items-center justify-center overflow-hidden bg-zinc-800">
         {/* Hero background */}
