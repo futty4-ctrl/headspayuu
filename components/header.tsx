@@ -54,26 +54,25 @@ export function Header() {
             <Menu className="h-5 w-5" />
           </button>
 
-          {/* Center: 空き状況 / LINE リンク */}
-          <div className="flex items-center gap-4 text-[11px] tracking-[0.15em] text-foreground/80 sm:text-[10px]">
+          {/* Center: 空き状況 / LINE ボタン */}
+          <div className="flex items-center gap-2 text-[11px] tracking-[0.15em] sm:text-[10px]">
             <button
               type="button"
               onClick={(e) => {
                 e.preventDefault()
                 window.open(COUBIC_URL, "_blank", "noopener,noreferrer")
               }}
-              className="transition-colors hover:text-gold"
+              className="inline-flex items-center justify-center rounded-full border border-foreground/40 bg-background/80 px-3 py-1.5 text-foreground/80 shadow-sm transition-all hover:border-gold hover:text-gold hover:shadow-md"
             >
               空き状況を見る
             </button>
-            <span className="text-foreground/40">｜</span>
             <button
               type="button"
               onClick={(e) => {
                 e.preventDefault()
                 window.open(LINE_URL, "_blank", "noopener,noreferrer")
               }}
-              className="transition-colors hover:text-gold"
+              className="inline-flex items-center justify-center rounded-full border border-foreground/40 bg-background/80 px-3 py-1.5 text-foreground/80 shadow-sm transition-all hover:border-gold hover:text-gold hover:shadow-md"
             >
               LINEで相談
             </button>
