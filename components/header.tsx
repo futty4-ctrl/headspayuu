@@ -13,6 +13,7 @@ const navLinks = [
   { label: "メニュー", href: "#menu" },
   { label: "アクセス", href: "#access" },
   { label: "よくある質問", href: "#faq" },
+  { label: "会員様限定オンラインストア", href: "https://headspayu.stores.jp/", external: true },
 ]
 
 export function Header() {
@@ -133,6 +134,10 @@ export function Header() {
                     onClick={(e) => {
                       e.preventDefault()
                       setIsMenuOpen(false)
+                      if (link.external) {
+                        window.open(link.href, "_blank", "noopener,noreferrer")
+                        return
+                      }
                       const targetId = link.href.replace("#", "")
                       setTimeout(() => {
                         const el = document.getElementById(targetId)
