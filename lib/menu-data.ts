@@ -51,7 +51,7 @@ export const menus: Menu[] = [
     id: "scalp",
     tab: "育毛×ヘッドスパ",
     enTitle: "Scalp Care Head Spa",
-    image: "/images/menu-scalp.png",
+    image: "/images/menu-scalp.jpg",
     descriptionParagraphs: [
       "お客様指名No.1として支持される、頭皮と髪を根本から整えるラグジュアリーな育毛ヘッドスパ。",
       "医師も推奨する上質なヒト臍帯由来幹細胞上清液を贅沢に使用し、頭皮環境を健やかに整え、ハリ・コシのある美しい髪へ導きます。",
@@ -96,7 +96,7 @@ export const menus: Menu[] = [
     id: "color",
     tab: "ヘアカラー×ヘッドスパ",
     enTitle: "Hair Color Head Spa",
-    image: "/images/menu-color.png",
+    image: "/images/menu-color.jpg",
     descriptionParagraphs: [
       "ゼロテクニックカラーで、頭皮への刺激をできる限り抑えながら、髪への負担にも配慮し、美しいカラーデザインとスカルプケアを同時に叶える贅沢なハイブリッドメニューです。",
       "アロマクリームバスを用い、血流・リンパ・自律神経のバランスにやさしく丁寧にアプローチ。心地よい癒しの時間の中で、頭皮と髪を健やかな状態へ導きます。",
