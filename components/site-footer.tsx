@@ -23,7 +23,7 @@ export function SiteFooter() {
               福岡県福岡市西区豊浜2丁目20-20-2
             </p>
             <p className="text-[10px] leading-[2] tracking-[0.1em] text-foreground/30 lg:text-xs">
-              営業時間 9:30～16:30（不定休）
+              営業時間 9:30～16:30（日曜日）
             </p>
           </div>
         </FadeIn>

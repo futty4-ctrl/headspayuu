@@ -3,15 +3,16 @@
 import { useState, useEffect } from "react"
 import { Menu, X } from "lucide-react"
 import { motion, AnimatePresence } from "framer-motion"
+import Image from "next/image"
 
 const COUBIC_URL = "https://coubic.com/yuheadspa/services"
 const LINE_URL = "https://lin.ee/7hso3k1"
 
 const navLinks = [
-  { label: "ABOUT", href: "#about" },
-  { label: "MENU", href: "#menu" },
-  { label: "ACCESS", href: "#access" },
-  { label: "FAQ", href: "#faq" },
+  { label: "当店について", href: "#about" },
+  { label: "メニュー", href: "#menu" },
+  { label: "アクセス", href: "#access" },
+  { label: "よくある質問", href: "#faq" },
 ]
 
 export function Header() {
@@ -78,9 +79,15 @@ export function Header() {
             </button>
           </div>
 
-          {/* Right: Logo placeholder */}
-          <div className="flex h-8 w-8 items-center justify-center rounded-full bg-muted" aria-label="店舗ロゴ">
-            <span className="sr-only">ゆう</span>
+          {/* Right: Logo */}
+          <div className="relative h-8 w-8 overflow-hidden rounded-full">
+            <Image
+              src="/images/logo.png"
+              alt="ゆう"
+              fill
+              className="object-contain"
+              sizes="32px"
+            />
           </div>
         </div>
       </header>

@@ -23,17 +23,14 @@ export function About() {
         <FadeIn>
           <div className="mb-6 flex flex-col items-center">
             <span className="text-base tracking-[0.5em] text-gold/80 sm:text-lg">
-              ABOUT
+              当店について
             </span>
           </div>
         </FadeIn>
 
         <FadeIn delay={0.1}>
           <div className="mb-20 text-center">
-            <p className="mb-4 text-base tracking-[0.2em] text-white sm:text-lg">
-              {'～当店について～'}
-            </p>
-            <div className="relative mx-auto mb-8 aspect-[4/3] w-full max-w-xl overflow-hidden rounded-sm border border-border/30">
+<div className="relative mx-auto mb-8 aspect-[4/3] w-full max-w-xl overflow-hidden rounded-sm border border-border/30">
               <Image
                 src="/images/about-interior.png"
                 alt="当店の施術ルーム"
@@ -44,26 +41,24 @@ export function About() {
             </div>
             <div className="mt-4 flex flex-col gap-8">
               <p className="text-sm leading-[2.6] tracking-[0.08em] text-foreground/70 lg:text-[15px]">
-                福岡市西区豊浜にて
-                <br />
-                1日限定3名様の
-                <br />
-                完全予約制ヘッドスパ専門店を運営しております。
+                福岡市西区豊浜の完全個室ヘッドスパ専門店。<br />
+                ヘッドスパ歴15年の技術で、疲労・眼精疲労・<br />
+                頭皮ケア・育毛ケアを丁寧にサポートいたします。<br />
+                1日3名様限定、完全予約制。<br />
+                落ち着いた空間で、ゆっくりお過ごしください。
               </p>
-              <p className="text-sm leading-[2.6] tracking-[0.08em] text-foreground/70 lg:text-[15px]">
-                専門店ならではの技術と知識を活かし
-                <br />
-                {'癒しのその先――'}
-                <br />
-                頭皮や髪のエイジングケア
-                <br />
-                育毛に特化したスパメニューを取り揃えております。
-              </p>
-              <p className="text-sm leading-[2.6] tracking-[0.08em] text-foreground/70 lg:text-[15px]">
-                日常の中で心の拠り所となる場所でありますよう
-                <br />
-                お一人おひとりに寄り添い丁寧に心を込めて施術いたします。
-              </p>
+
+              {/* 動画 */}
+              <div className="mx-auto mt-4 w-full max-w-xl overflow-hidden rounded-sm border border-border/30">
+                <video
+                  src="/videos/about.mp4"
+                  autoPlay
+                  muted
+                  loop
+                  playsInline
+                  className="w-full object-cover"
+                />
+              </div>
             </div>
           </div>
         </FadeIn>

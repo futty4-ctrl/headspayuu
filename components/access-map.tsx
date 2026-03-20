@@ -8,12 +8,9 @@ export function AccessMap() {
       <div className="mx-auto max-w-3xl px-5 lg:px-10">
         <FadeIn>
           <div className="mb-16 flex flex-col items-center">
-            <span className="mb-2 text-sm font-medium tracking-[0.5em] text-gold/80 sm:text-base">
-              ACCESS
-            </span>
-            <h2 className="text-sm font-light tracking-[0.2em] text-foreground/80 lg:text-base">
+            <span className="text-sm font-medium tracking-[0.5em] text-gold/80 sm:text-base">
               アクセス
-            </h2>
+            </span>
           </div>
         </FadeIn>
 
@@ -61,7 +58,7 @@ export function AccessMap() {
                 CLOSED
               </p>
               <p className="text-xs tracking-[0.1em] text-foreground/80">
-                不定休
+                日曜日
               </p>
             </div>
           </div>

@@ -3,10 +3,10 @@
 import { FadeIn } from "@/components/fade-in"
 
 const links: { label: string; sectionId: string }[] = [
-  { label: "ABOUT", sectionId: "about" },
-  { label: "MENU", sectionId: "menu" },
-  { label: "ACCESS", sectionId: "access" },
-  { label: "FAQ", sectionId: "faq" },
+  { label: "当店について", sectionId: "about" },
+  { label: "メニュー", sectionId: "menu" },
+  { label: "アクセス", sectionId: "access" },
+  { label: "よくある質問", sectionId: "faq" },
 ]
 
 function scrollToSection(sectionId: string) {
